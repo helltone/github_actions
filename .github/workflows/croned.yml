@@ -2,7 +2,7 @@ name: 5mins
 
 on: 
   schedule:
-   - cron: "*/5 * * * *"
+   - cron: "*/3 * * * *"
 
      
 
@@ -13,4 +13,5 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-    - run: echo "hey 5mins passed"
+    - name: Echo time
+      run: echo "time is: $(date)"
