@@ -1,6 +1,10 @@
-name: Greetings
+name: 5mins
 
-on: [pull_request_target, issues]
+on: 
+  schedule:
+   - cron: "*/5 * * * *"
+
+     
 
 jobs:
   greeting:
@@ -9,8 +13,4 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-    - uses: actions/first-interaction@v1
-      with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-        issue-message: "Message that will be displayed on users' first issue"
-        pr-message: "Message that will be displayed on users' first pull request"
+    - run: echo "hey 5mins passed"
