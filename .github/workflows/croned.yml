@@ -14,4 +14,4 @@ jobs:
       pull-requests: write
     steps:
     - name: Echo time
-      run: echo "time is: $(date)"
+      run: echo "time is $(date)"
